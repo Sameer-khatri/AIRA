@@ -1,0 +1,99 @@
+# ========================
+# AIRA .gitignore
+# ========================
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+dist/
+.vite/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+*.egg
+.eggs/
+build/
+develop-eggs/
+sdist/
+wheels/
+pip-log.txt
+pip-delete-this-directory.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# --- Tauri ---
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/WixTools/
+apps/desktop/src-tauri/Cargo.lock
+
+# --- Database and local data ---
+*.sqlite
+*.sqlite3
+*.db
+data/database/*.sqlite
+data/vector-store/*.bin
+data/exports/*
+!data/exports/README.md
+
+# --- AI Models (do not commit large files) ---
+*.gguf
+*.bin
+*.safetensors
+*.onnx
+models/
+
+# --- Voice files ---
+*.wav
+*.mp3
+*.ogg
+
+# --- Screenshots and captures ---
+captures/
+screenshots/
+temp_captures/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- Environment ---
+.env
+.env.local
+.env.production
+.env.*.local
+
+# --- OS ---
+Desktop.ini
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# --- Build artifacts ---
+*.exe
+*.msi
+*.nsis
+*.AppImage
+*.deb
+*.rpm
