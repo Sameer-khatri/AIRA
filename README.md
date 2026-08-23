@@ -15,9 +15,9 @@ AIRA is not a generic chatbot. Her value comes from **structured memory**, **pro
 ## Project Status
 
 ```
-Phase:    🏗️  Planning / Structure
-Stage:    Milestone 0 — Project Foundation
-Code:     Not yet implemented
+Phase:    ⚙️  Milestone 0 Foundation
+Stage:    Milestone 0 — Runnable Foundation Complete
+Code:     FastAPI backend + React frontend running
 Models:   Not yet installed
 ```
 
@@ -114,15 +114,72 @@ AIRA/
 
 ---
 
+## Required Software
+
+To develop and run AIRA locally, you need:
+- **Node.js** (v18+ recommended)
+- **Python** (v3.10+ recommended)
+
+## Running the Application
+
+### 1. Backend Setup & Run (FastAPI)
+
+Navigate to the backend folder, create a virtual environment, install the application, and start the development server:
+
+```bash
+cd apps/backend
+python -m venv .venv
+
+# On Windows (Command Prompt):
+.venv\Scripts\activate.bat
+# On Windows (PowerShell):
+.venv\Scripts\activate.ps1
+# On macOS/Linux:
+source .venv/bin/activate
+
+pip install -e .
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+The database `aira.sqlite` will be created automatically in `apps/backend/` on startup.
+
+### 2. Frontend Setup & Run (React + TS + Vite)
+
+Open a new terminal window, navigate to the desktop frontend directory, install npm packages, and run the Vite dev server:
+
+```bash
+cd apps/desktop
+npm install
+npm run dev
+```
+
+The React interface will open at [http://localhost:5173](http://localhost:5173).
+
+## Testing the Health Endpoint
+
+Verify that the local backend service is functioning and accessing SQLite database by running:
+```bash
+curl http://127.0.0.1:8000/api/health
+```
+
+Expected output:
+```json
+{
+  "status": "ok",
+  "app": "AIRA",
+  "mode": "local",
+  "version": "0.1.0",
+  "database": "connected"
+}
+```
+
 ## Next Step
 
-**Milestone 0 — Project Foundation**
-
-- Initialize Tauri desktop app in `apps/desktop/`
-- Initialize FastAPI backend in `apps/backend/`
-- Connect frontend to backend health endpoint
-- Set up SQLite database
-- Verify the desktop window opens and backend responds
+**Milestone 1 — Local Chat MVP**
+- Implement intent routing in `core/brain/`.
+- Set up Ollama connection in `integrations/ollama/`.
+- Stream local LLM chat responses.
+- Manage conversation session records in SQLite.
 
 ---
 

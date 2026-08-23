@@ -1,63 +1,73 @@
-# apps/backend/
+# AIRA Local Backend
 
-The AIRA local backend — built with **Python** and **FastAPI**.
+FastAPI local backend service for the AIRA desktop companion.
 
-## What this folder is for
+## Features (Milestone 0)
+- REST API bound to `127.0.0.1:8000` with local CORS enabled.
+- Database initialization creating SQLite database on start.
+- `Settings` table setup.
+- `/api/health` endpoint reporting app version, mode, status, and SQLite connectivity.
 
-This is the engine that powers AIRA. It runs as a local HTTP/WebSocket service on `localhost` and handles:
+## Prerequisites
+- Python 3.10+
+- SQLite3
 
-- Chat orchestration and AI model routing.
-- Memory storage and retrieval.
-- Project and checkpoint management.
-- Learning/course/roadmap tracking.
-- Voice pipeline (speech-to-text, text-to-speech).
-- Screen capture and OCR processing.
-- Avatar state management.
-- Settings and privacy controls.
-- Tool execution and action logging.
+## Setup & Installation
 
-## What will go here later
+1. Navigate to the backend directory:
+   ```bash
+   cd apps/backend
+   ```
 
-- `app/` — Python application code:
-  - `main.py` — FastAPI entry point.
-  - `config.py` — Configuration management.
-  - `database.py` — SQLite connection and ORM setup.
-  - `api/` — API route handlers.
-  - `services/` — Business logic services.
-  - `models/` — Database models (SQLModel/SQLAlchemy).
-- `tests/` — Unit and integration tests.
-- `pyproject.toml` — Python dependencies and project metadata.
+2. Create a virtual environment:
+   ```bash
+   python -m venv .venv
+   ```
 
-## What does NOT go here
+3. Activate the virtual environment:
+   - **Windows (Command Prompt):**
+     ```cmd
+     .venv\Scripts\activate.bat
+     ```
+   - **Windows (PowerShell):**
+     ```powershell
+     .venv\Scripts\activate.ps1
+     ```
+   - **macOS/Linux:**
+     ```bash
+     source .venv/bin/activate
+     ```
 
-- Frontend/UI code (use `apps/desktop/`).
-- Shared TypeScript types (use `packages/shared-types/`).
-- Avatar assets (use `avatar/`).
-- Documentation (use `docs/`).
+4. Install the package in editable mode:
+   ```bash
+   pip install -e .
+   ```
 
-## Tech stack
+## Running the Backend
 
-| Tool | Purpose |
-|---|---|
-| Python 3.11+ | Runtime |
-| FastAPI | Web framework (HTTP + WebSocket) |
-| SQLite | Local database |
-| SQLModel | ORM (Pydantic + SQLAlchemy) |
-| Ollama client | Local LLM integration |
-| Whisper / faster-whisper | Speech-to-text |
-| Piper TTS | Text-to-speech |
-| Tesseract / EasyOCR | OCR for screen text |
-| Uvicorn | ASGI server |
-
-## API binding
-
-The backend binds only to `localhost` by default:
-```
-http://127.0.0.1:<port>
+Start the server using `uvicorn`:
+```bash
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-No public network access. No cloud deployment.
+The service will run locally at:
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Current status
+## Testing the Health Check Endpoint
 
-Structure only. No code or dependencies installed yet.
+You can test the health endpoint using a web browser or curl:
+```bash
+curl http://127.0.0.1:8000/api/health
+```
+
+Expected JSON response:
+```json
+{
+  "status": "ok",
+  "app": "AIRA",
+  "mode": "local",
+  "version": "0.1.0",
+  "database": "connected"
+}
+```
+Upon startup, a file named `aira.sqlite` will be created in this directory.

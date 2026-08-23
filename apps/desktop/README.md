@@ -1,48 +1,38 @@
-# apps/desktop/
+# AIRA Desktop Console
 
-The AIRA desktop application — built with **Tauri 2** (Rust) and **React + TypeScript** (Vite).
+React + TypeScript + Vite frontend console interface for the AIRA desktop companion.
 
-## What this folder is for
+## Features (Milestone 0)
+- Futuristic dark theme layout matching the AIRA design specifications.
+- Persistent sidebar navigation spanning Home, Chat, Projects, Learning, Roadmap, Memory, and Settings.
+- Mission Control Dashboard containing Status Cards.
+- Automated system polling checker checking the local backend server health (`http://127.0.0.1:8000/api/health`) every 5 seconds.
+- Interactive backend connection status badge (`SYSTEM ACTIVE` / `SYSTEM OFFLINE` / `ESTABLISHING...`).
 
-This is where the main desktop application lives. It provides:
+## Prerequisites
+- Node.js (LTS version recommended)
+- npm or pnpm
 
-- The dashboard window (command center UI).
-- The floating avatar window (transparent, always-on-top companion).
-- The system tray icon and menu.
-- Global keyboard shortcuts.
-- Native OS integrations (microphone, screen capture, camera permissions).
-- Communication with the local backend via HTTP/WebSocket.
+## Setup & Installation
 
-## What will go here later
+1. Navigate to the desktop directory:
+   ```bash
+   cd apps/desktop
+   ```
 
-- `src/` — React + TypeScript source code (components, routes, features, hooks, stores).
-- `src-tauri/` — Tauri/Rust native code (commands, window management, tray, hotkeys).
-- `public/` — Static assets (icons, fonts, images).
-- `package.json` — Node.js dependencies and scripts.
-- Vite and Tauri configuration files.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## What does NOT go here
+## Running in Development Mode
 
-- Backend/API code (use `apps/backend/`).
-- AI brain logic (use `core/brain/`).
-- Voice processing code (use `voice/`).
-- Avatar art assets (use `avatar/assets/`).
-- Shared types (use `packages/shared-types/`).
+Run the development server:
+```bash
+npm run dev
+```
 
-## Tech stack
+The web console will be available at:
+[http://localhost:5173](http://localhost:5173) or [http://127.0.0.1:5173](http://127.0.0.1:5173)
 
-| Tool | Purpose |
-|---|---|
-| Tauri 2 | Native desktop shell, system tray, hotkeys, transparent windows |
-| React | Dashboard UI framework |
-| TypeScript | Type-safe frontend code |
-| Vite | Fast build tool |
-| Zustand | State management |
-| TanStack Query | Server state / API data fetching |
-| Framer Motion | Animations |
-| Recharts | Dashboard charts |
-| Radix UI | Accessible UI primitives |
-
-## Current status
-
-Structure only. No code or dependencies installed yet.
+Ensure the backend server is running on port `8000` to see the Status indicators transition from **OFFLINE** to **CONNECTED**.
