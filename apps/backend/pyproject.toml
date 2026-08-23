@@ -8,7 +8,8 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "sqlmodel",
-    "python-dotenv"
+    "python-dotenv",
+    "ollama"
 ]
 
 [build-system]

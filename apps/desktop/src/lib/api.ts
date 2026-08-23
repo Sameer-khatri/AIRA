@@ -65,3 +65,20 @@ export async function fetchConversations(): Promise<ConversationSummary[]> {
   if (!response.ok) throw new Error("Failed to fetch conversations");
   return response.json();
 }
+
+// ── Model status ──────────────────────────────────────────────────────────────
+
+export interface ModelStatus {
+  ollama: "online" | "offline";
+  default_model: string;
+  default_model_available: boolean;
+  available_models: string[];
+  base_url: string;
+  error?: string;
+}
+
+export async function fetchModelStatus(): Promise<ModelStatus> {
+  const response = await fetch("http://127.0.0.1:8000/api/models/status");
+  if (!response.ok) throw new Error("Failed to fetch model status");
+  return response.json();
+}

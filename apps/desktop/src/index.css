@@ -584,3 +584,51 @@ body {
   opacity: 0.3;
   cursor: not-allowed;
 }
+
+/* ── Model Status Bar ────────────────────────────────────────────────────────── */
+
+.model-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 40px;
+  font-size: 12px;
+  font-weight: 500;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.model-bar code {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  background-color: var(--surface-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.model-bar.online {
+  background-color: rgba(88, 230, 169, 0.06);
+  color: var(--success);
+  border-bottom-color: rgba(88, 230, 169, 0.15);
+}
+
+.model-bar.online strong {
+  color: var(--cyan-core);
+}
+
+.model-bar.offline {
+  background-color: rgba(255, 111, 145, 0.06);
+  color: var(--danger);
+  border-bottom-color: rgba(255, 111, 145, 0.15);
+}
+
+.model-bar.warn {
+  background-color: rgba(255, 204, 102, 0.06);
+  color: var(--warning);
+  border-bottom-color: rgba(255, 204, 102, 0.15);
+}
+
+.model-bar.loading {
+  color: var(--text-secondary);
+}
+
