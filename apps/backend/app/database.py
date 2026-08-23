@@ -7,6 +7,7 @@ connect_args = {"check_same_thread": False}
 engine = create_engine(DATABASE_URL, connect_args=connect_args)
 
 def init_db():
-    # This imports all models so they are registered with SQLModel metadata
-    from app.models.settings import Settings
+    # Import every model here so SQLModel registers their tables
+    from app.models.settings import Settings  # noqa: F401
+    from app.models.conversation import Conversation, Message  # noqa: F401
     SQLModel.metadata.create_all(engine)

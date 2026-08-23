@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { StatusCard, StatusType } from "./components/StatusCard";
 import { fetchHealth, HealthResponse } from "./lib/api";
+import ChatPage from "./features/chat/ChatPage";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -100,6 +101,7 @@ export default function App() {
         );
 
       case "chat":
+        return <ChatPage />;
       case "projects":
       case "learning":
       case "roadmap":
