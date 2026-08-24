@@ -16,6 +16,11 @@ export default function ChatPage() {
   const [modelStatus, setModelStatus] = useState<ModelStatus | null>(null);
   const [modelLoading, setModelLoading] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const [latestMetadata, setLatestMetadata] = useState<{
+    intent?: string;
+    privacy?: string;
+    model?: string;
+  } | null>(null);
 
   // Poll model status every 10 seconds
   useEffect(() => {
@@ -52,6 +57,11 @@ export default function ChatPage() {
       const res = await sendMessage({ message: text, conversation_id: conversationId });
       setConversationId(res.conversation_id);
       setMessages((prev) => [...prev, { role: "assistant", content: res.reply }]);
+      setLatestMetadata({
+        intent: res.intent,
+        privacy: res.privacy_state,
+        model: res.model
+      });
     } catch {
       setError(
         "Could not reach the backend. Make sure the server is running on port 8000."
@@ -119,6 +129,15 @@ export default function ChatPage() {
         <div>
           <h2 className="page-title" style={{ fontSize: "18px" }}>Chat</h2>
           <p className="page-subtitle">Powered by local Ollama model</p>
+          {latestMetadata && (
+            <div style={{ fontSize: "11px", color: "var(--text-secondary)", marginTop: "4px" }}>
+              <span>Intent: {latestMetadata.intent || "N/A"}</span>
+              <span style={{ margin: "0 6px" }}>|</span>
+              <span>Privacy: {latestMetadata.privacy || "N/A"}</span>
+              <span style={{ margin: "0 6px" }}>|</span>
+              <span>Model: {latestMetadata.model || "N/A"}</span>
+            </div>
+          )}
         </div>
       </div>
 

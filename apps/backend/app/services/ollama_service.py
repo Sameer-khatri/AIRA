@@ -47,7 +47,7 @@ def get_status() -> dict:
         }
 
 
-def chat(messages: list[dict]) -> str:
+def chat(messages: list[dict], model: str | None = None) -> str:
     """
     Send a list of {role, content} messages to Ollama and return the reply.
 
@@ -55,5 +55,6 @@ def chat(messages: list[dict]) -> str:
         RuntimeError — if Ollama is unreachable or the request fails.
     """
     client = _client()
-    response = client.chat(model=DEFAULT_MODEL, messages=messages)
+    use_model = model or DEFAULT_MODEL
+    response = client.chat(model=use_model, messages=messages)
     return response.message.content

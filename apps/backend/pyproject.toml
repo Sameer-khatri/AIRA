@@ -15,3 +15,11 @@ dependencies = [
 [build-system]
 requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.pyrefly]
+# Only analyse real source files — ignore Pyrefly's own virtual in-memory stubs
+project_includes = ["app"]
+# Exclude prompt/personality files: their content is natural language, not Python
+ignore_errors_in_files = [
+    "app/core/brain/personality.py",
+]

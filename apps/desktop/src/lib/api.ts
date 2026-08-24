@@ -26,6 +26,9 @@ export interface ChatResponse {
   reply: string;
   mode: string;
   status: string;
+  model?: string;
+  intent?: string;
+  privacy_state?: string;
 }
 
 export interface ConversationSummary {
