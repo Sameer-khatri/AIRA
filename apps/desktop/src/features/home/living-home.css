@@ -1,0 +1,55 @@
+/* Focused visual-correction overrides for the Living Home scene. */
+.living-home .avatar-stage-full .avatar-transform-layer {
+  height: clamp(520px, 74vh, 800px);
+  bottom: 3.8vh;
+}
+
+.living-home .avatar-stage-upper .avatar-camera {
+  top: 34px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: clamp(480px, 37vw, 580px);
+  height: clamp(520px, 58vh, 620px);
+  transform: translateX(-50%);
+}
+
+.living-home .avatar-stage-upper .avatar-transform-layer {
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  transform: translateX(-50%) scale(1.14);
+  transform-origin: center top;
+}
+
+.living-home .water-ripple-engaged,
+.living-home .water-ripple-waving { opacity: 0; }
+
+.living-home .water-ripple-stage { transition: opacity .32s ease, left .7s cubic-bezier(.22,.8,.24,1); }
+.living-home .water-contact-shimmer { opacity: .66; }
+.living-home .water-inner-ring { border-color: rgba(92, 220, 194, .31); }
+
+.living-home .water-ripple-presenting { left: 65%; }
+.living-home.living-home-memory-open .water-ripple-stage { left: 43%; }
+
+.living-home .living-panel.today-panel { top: 16%; }
+.living-home .living-panel.memory-panel { top: 17%; }
+
+.living-home .avatar-engage-target:focus-visible {
+  outline: none;
+  border-radius: 0;
+}
+
+.living-home .avatar-engage-target:focus-visible::after {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .living-home .avatar-stage-full .avatar-transform-layer { height: min(64vh, 500px); }
+  .living-home .avatar-stage-upper .avatar-camera { top: 26px; width: min(90vw, 480px); height: min(58vh, 520px); }
+  .living-home .avatar-stage-upper .avatar-transform-layer { top: 0; bottom: auto; }
+  .living-home .water-ripple-presenting, .living-home.living-home-memory-open .water-ripple-stage { left: 50%; }
+  .living-home .living-panel.today-panel, .living-home .living-panel.memory-panel { top: auto; right: 12px; bottom: 124px; left: 12px; width: auto; max-height: 46vh; }
+}
