@@ -10,4 +10,10 @@ def init_db():
     # Import every model here so SQLModel registers their tables
     from app.models.settings import Settings  # noqa: F401
     from app.models.conversation import Conversation, Message  # noqa: F401
+    from app.models.project import (  # noqa: F401
+        Project,
+        ProjectCheckpoint,
+        ProjectDecision,
+        ProjectTask,
+    )
     SQLModel.metadata.create_all(engine)
