@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from datetime import datetime
 from typing import List, Optional
 
@@ -22,15 +20,15 @@ class Project(SQLModel, table=True):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow, index=True)
 
-    checkpoints: List[ProjectCheckpoint] = Relationship(
+    checkpoints: List["ProjectCheckpoint"] = Relationship(
         back_populates="project",
         sa_relationship_kwargs={"cascade": "all, delete-orphan"},
     )
-    tasks: List[ProjectTask] = Relationship(
+    tasks: List["ProjectTask"] = Relationship(
         back_populates="project",
         sa_relationship_kwargs={"cascade": "all, delete-orphan"},
     )
-    decisions: List[ProjectDecision] = Relationship(
+    decisions: List["ProjectDecision"] = Relationship(
         back_populates="project",
         sa_relationship_kwargs={"cascade": "all, delete-orphan"},
     )

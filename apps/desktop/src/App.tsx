@@ -3,6 +3,7 @@ import { Sidebar } from "./components/Sidebar";
 import { StatusCard, StatusType } from "./components/StatusCard";
 import { fetchHealth, HealthResponse } from "./lib/api";
 import ChatPage from "./features/chat/ChatPage";
+import ProjectsPage from "./features/projects/ProjectsPage";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -74,16 +75,16 @@ export default function App() {
 
               <StatusCard
                 title="Current Milestone"
-                value="MILESTONE 0"
+                value="MILESTONE 2A"
                 status="info"
-                description="Runnable Foundation. Running a local FastAPI backend and standalone React desktop environment connected over API."
+                description="Project Memory Foundation. Capturing active project context, checkpoints, and next actions locally."
               />
 
               <StatusCard
                 title="Next Build Step"
-                value="MILESTONE 1"
+                value="MILESTONE 2A"
                 status="info"
-                description="Local Chat MVP. Integrating Ollama local models, streaming chat, routing core commands, and managing session histories."
+                description="Project Memory Foundation. Save checkpoints and tasks for the active AIRA project."
               />
             </div>
 
@@ -103,6 +104,7 @@ export default function App() {
       case "chat":
         return <ChatPage />;
       case "projects":
+        return <ProjectsPage />;
       case "learning":
       case "roadmap":
       case "memory":
@@ -118,7 +120,7 @@ export default function App() {
               <p>
                 This screen represents the placeholder space for the {activeTab} section. It will be implemented in subsequent milestones of the AIRA roadmap.
               </p>
-              <span className="badge">Milestone 1+ Feature</span>
+              <span className="badge">Planned Feature</span>
             </div>
           </div>
         );

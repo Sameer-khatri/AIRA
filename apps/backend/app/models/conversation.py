@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional
 from sqlmodel import Field, SQLModel, Relationship
 
 
@@ -11,7 +11,7 @@ class Conversation(SQLModel, table=True):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 
-    messages: List["Message"] = Relationship(back_populates="conversation")
+    messages: list["Message"] = Relationship(back_populates="conversation")
 
 
 class Message(SQLModel, table=True):
