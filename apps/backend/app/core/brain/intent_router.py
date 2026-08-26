@@ -1,12 +1,52 @@
+import re
+
+
+def _normalize_message(message: str) -> str:
+    """Normalize case, apostrophes, punctuation, and repeated whitespace."""
+    normalized = message.casefold().replace("’", "'")
+    normalized = re.sub(r"'", "", normalized)
+    normalized = re.sub(r"[^\w\s]", " ", normalized)
+    return " ".join(normalized.split())
+
+
+def _matches_project_phrase(message: str, phrase: str) -> bool:
+    """Match a project phrase exactly or as the beginning of a qualified question."""
+    return message == phrase or message.startswith(f"{phrase} ")
+
+
 def detect_intent(message: str) -> str:
-    """Rule-based intent detection for Milestone 1C."""
-    msg_lower = message.lower().strip()
-    
-    project_keywords = [
-        "where did i leave off", "where we left", "continue project", 
-        "last time", "resume my work", "what was i doing"
+    """Detect intents with deterministic, rule-based matching."""
+    msg_lower = _normalize_message(message)
+
+    project_phrases = [
+        "where did i leave off",
+        "where did we leave off",
+        "continue project",
+        "resume my work",
+        "resume the project",
+        "resume my project",
+        "what was i doing",
+        "what was i working on",
+        "what should i do next",
+        "what should i work on next",
+        "what should we work on next",
+        "what is the next step",
+        "lets move to the next step",
+        "continue from last time",
+        "continue from where we stopped",
+        "current state of aira",
+        "what is the current state of aira",
+        "status of the aira project",
+        "what is the status of the aira project",
+        "give me aira project status",
+        "what tasks are pending",
+        "tasks are pending",
+        "pending tasks",
+        "what are my pending tasks",
+        "what was the last checkpoint",
+        "what are we currently working on",
     ]
-    if any(k in msg_lower for k in project_keywords):
+    if any(_matches_project_phrase(msg_lower, phrase) for phrase in project_phrases):
         return "project_question"
         
     checkpoint_keywords = [

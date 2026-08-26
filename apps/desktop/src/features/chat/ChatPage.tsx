@@ -18,6 +18,7 @@ export default function ChatPage() {
   const bottomRef = useRef<HTMLDivElement>(null);
   const [latestMetadata, setLatestMetadata] = useState<{
     intent?: string;
+    projectMemory?: boolean;
     privacy?: string;
     model?: string;
   } | null>(null);
@@ -59,6 +60,7 @@ export default function ChatPage() {
       setMessages((prev) => [...prev, { role: "assistant", content: res.reply }]);
       setLatestMetadata({
         intent: res.intent,
+        projectMemory: res.project_context_used,
         privacy: res.privacy_state,
         model: res.model
       });
@@ -132,6 +134,8 @@ export default function ChatPage() {
           {latestMetadata && (
             <div style={{ fontSize: "11px", color: "var(--text-secondary)", marginTop: "4px" }}>
               <span>Intent: {latestMetadata.intent || "N/A"}</span>
+              <span style={{ margin: "0 6px" }}>|</span>
+              <span>Project memory: {latestMetadata.projectMemory ? "used" : "not used"}</span>
               <span style={{ margin: "0 6px" }}>|</span>
               <span>Privacy: {latestMetadata.privacy || "N/A"}</span>
               <span style={{ margin: "0 6px" }}>|</span>

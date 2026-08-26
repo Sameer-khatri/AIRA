@@ -31,6 +31,7 @@ export interface ChatResponse {
   model?: string;
   intent?: string;
   privacy_state?: string;
+  project_context_used?: boolean;
 }
 
 export interface ConversationSummary {

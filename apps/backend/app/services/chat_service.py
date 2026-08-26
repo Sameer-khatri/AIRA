@@ -5,6 +5,8 @@ from app.database import engine
 from app.models.conversation import Conversation, Message
 from app.config import DEFAULT_MODEL
 from app.core.brain.schemas import ConversationMessage
+from app.core.brain.intent_router import detect_intent
+from app.services.project_service import get_active_project_context
 
 
 
@@ -67,14 +69,24 @@ def handle_chat(conversation_id: Optional[int], user_message: str) -> dict:
         # Build history before adding current message
         history = _load_history(session, conv.id)
 
+        detected_intent = detect_intent(user_message)
+        project_context = None
+        if detected_intent == "project_question":
+            try:
+                project_context = get_active_project_context(session)
+            except Exception as exc:
+                print(f"[chat] Project context error: {exc}")
+
+        # Save user turn before generation so project questions are still stored
+        save_message(session, conv.id, "user", user_message)
+
         # Generate reply using brain
         brain_response = process_chat_message(
             user_message=user_message,
-            conversation_history=history
+            conversation_history=history,
+            detected_intent=detected_intent,
+            project_context=project_context
         )
-
-        # Save user turn
-        save_message(session, conv.id, "user", user_message)
 
         # Save assistant turn
         save_message(session, conv.id, "assistant", brain_response.reply)
@@ -91,7 +103,8 @@ def handle_chat(conversation_id: Optional[int], user_message: str) -> dict:
             "model": brain_response.model,
             "status": brain_response.status,
             "intent": brain_response.intent,
-            "privacy_state": brain_response.privacy_state
+            "privacy_state": brain_response.privacy_state,
+            "project_context_used": brain_response.project_context_used
         }
 
 
