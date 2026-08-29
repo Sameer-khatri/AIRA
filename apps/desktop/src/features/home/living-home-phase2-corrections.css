@@ -1,0 +1,23 @@
+.living-home-phase2 .avatar-stage-full .avatar-transform-layer { left: 52%; }
+
+@media (max-width: 1100px) {
+  .living-home-phase2 .avatar-stage-full .avatar-transform-layer {
+    left: 73%;
+    width: min(370px, 38vw);
+    height: min(64vh, 590px);
+  }
+
+  .living-home-phase2 .home-data-anchor {
+    right: auto;
+    left: 24px;
+    width: 43vw;
+  }
+
+  .living-home-phase2 .home-resume-anchor { top: 18%; }
+  .living-home-phase2 .home-mission-anchor { top: 48%; }
+  .living-home-focus-today .home-resume-anchor { top: 13%; left: 24px; width: 42vw; }
+  .living-home-focus-today .home-mission-anchor { top: 31%; left: 24px; width: 52vw; }
+  .living-home-focus-today .home-today-space { left: 24px; width: 55vw; }
+  .living-home-focus-memory .home-data-anchor { display: none; }
+  .living-home-focus-memory .home-memory-space { left: 24px; width: 54vw; }
+}

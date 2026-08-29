@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
-import ChatPage from "./features/chat/ChatPage";
-import HomePage from "./features/home/HomePage";
-import ProjectsPage from "./features/projects/ProjectsPage";
+import { lazy, Suspense, useEffect, useState } from "react";
 import TopCommandBar from "./components/TopCommandBar";
+import AiraPersonalHome from "./features/home/personal/AiraPersonalHome";
 import {
   fetchHealth,
   fetchModelStatus,
@@ -10,28 +8,33 @@ import {
   ModelStatus,
 } from "./lib/api";
 
-function PlannedPage({ title }: { title: string }) {
-  return (
-    <div className="view-container planned-page">
-      <div className="section-header">
-        <span className="eyebrow">AIRA / PLANNED</span>
-        <h2>{title}</h2>
-        <p>This module is planned and is not active in the current build.</p>
-      </div>
-      <div className="planned-note">
-        <span>Reserved for a later milestone.</span>
-      </div>
-    </div>
-  );
-}
+const devPersonalHome = import.meta.env.DEV
+  ? {
+      id: "aira-personal-home" as const,
+      path: "/lab/aira-personal-home",
+      mainClass: "main-content-aira-personal-home",
+      Component: lazy(() => import("./features/lab/aira-personal-home/AiraPersonalHomeLab")),
+    }
+  : null;
 
-export default function App() {
-  const [activeTab, setActiveTab] = useState("home");
+const devLabs = import.meta.env.DEV
+  ? {
+      chatSignal: lazy(() => import("./features/lab/chat-signal/ChatSignalLab")),
+      livingHomeV2: lazy(() => import("./features/lab/living-home-v2/LivingHomeV2Lab")),
+      airaCharacter: lazy(() => import("./features/lab/aira-character/AiraCharacterLab")),
+    }
+  : null;
+
+type LabRoute = "chat-signal" | "living-home-v2" | "aira-character" | "aira-personal-home" | null;
+
+function AppShell({ labRoute = null }: { labRoute?: LabRoute }) {
+  const [activeTab, setActiveTab] = useState(labRoute === "chat-signal" ? "chat" : "home");
   const [connectionStatus, setConnectionStatus] = useState<"loading" | "connected" | "disconnected">("loading");
   const [healthData, setHealthData] = useState<HealthResponse | null>(null);
   const [modelStatus, setModelStatus] = useState<ModelStatus | null>(null);
 
   useEffect(() => {
+    if (labRoute === devPersonalHome?.id) return;
     let mounted = true;
 
     const checkHealth = async () => {
@@ -54,9 +57,10 @@ export default function App() {
       mounted = false;
       window.clearInterval(intervalId);
     };
-  }, []);
+  }, [labRoute]);
 
   useEffect(() => {
+    if (labRoute === devPersonalHome?.id) return;
     let mounted = true;
 
     const checkModel = async () => {
@@ -75,47 +79,64 @@ export default function App() {
       mounted = false;
       window.clearInterval(intervalId);
     };
-  }, []);
+  }, [labRoute]);
 
   const renderContent = () => {
-    switch (activeTab) {
-      case "home":
-        return (
-          <HomePage
-            health={healthData}
-            modelStatus={modelStatus}
-            connectionStatus={connectionStatus}
-            onNavigate={setActiveTab}
-          />
-        );
-      case "chat":
-        return <ChatPage />;
-      case "projects":
-        return <ProjectsPage />;
-      case "settings":
-        return <PlannedPage title="Settings" />;
-      case "learning":
-        return <PlannedPage title="Learning" />;
-      case "roadmap":
-        return <PlannedPage title="Roadmap" />;
-      case "memory":
-        return <PlannedPage title="Memory" />;
-      default:
-        return null;
+    if (labRoute === "chat-signal" && activeTab === "chat") {
+      if (!devLabs) return null;
+      const ChatSignalLab = devLabs.chatSignal;
+      return <Suspense fallback={<div className="planned-page">Loading Chat Signal…</div>}><ChatSignalLab /></Suspense>;
     }
+
+    if (labRoute === "living-home-v2" && activeTab === "home") {
+      if (!devLabs) return null;
+      const LivingHomeV2Lab = devLabs.livingHomeV2;
+      return <Suspense fallback={<div className="planned-page">Loading Living Home…</div>}><LivingHomeV2Lab /></Suspense>;
+    }
+
+    if (labRoute === "aira-character" && activeTab === "home") {
+      if (!devLabs) return null;
+      const AiraCharacterLab = devLabs.airaCharacter;
+      return <Suspense fallback={<div className="planned-page">Loading Character Lab…</div>}><AiraCharacterLab /></Suspense>;
+    }
+
+    if (devPersonalHome && labRoute === devPersonalHome.id && activeTab === "home") {
+      const PersonalHome = devPersonalHome.Component;
+      return <Suspense fallback={<div className="planned-page">Loading Personal Home…</div>}><PersonalHome /></Suspense>;
+    }
+
+    return <AiraPersonalHome health={healthData} modelStatus={modelStatus} connectionStatus={connectionStatus} />;
   };
 
   return (
     <div className="app-shell">
-      <TopCommandBar
-        activeTab={activeTab}
-        connectionStatus={connectionStatus}
-        modelStatus={modelStatus}
-        onNavigate={setActiveTab}
-      />
-      <main className={`main-content ${activeTab === "home" ? "main-content-home" : ""}`}>
+      {labRoute !== null && labRoute !== devPersonalHome?.id && (
+        <TopCommandBar
+          activeTab={activeTab}
+          connectionStatus={connectionStatus}
+          modelStatus={modelStatus}
+          onNavigate={setActiveTab}
+        />
+      )}
+      <main className={`main-content ${labRoute === null ? "main-content-aira-personal-home" : ""} ${labRoute === "chat-signal" && activeTab === "chat" ? "main-content-chat-signal" : ""} ${labRoute === "living-home-v2" && activeTab === "home" ? "main-content-living-v2" : ""} ${labRoute === "aira-character" && activeTab === "home" ? "main-content-aira-character" : ""} ${devPersonalHome && labRoute === devPersonalHome.id && activeTab === "home" ? devPersonalHome.mainClass : ""}`}>
         {renderContent()}
       </main>
     </div>
   );
+}
+
+export default function App() {
+  const path = window.location.pathname;
+  const labRoute: LabRoute = import.meta.env.DEV
+    ? path === "/lab/chat-signal"
+      ? "chat-signal"
+      : path === "/lab/living-home-v2"
+        ? "living-home-v2"
+        : path === "/lab/aira-character"
+          ? "aira-character"
+          : devPersonalHome && path === devPersonalHome.path
+            ? devPersonalHome.id
+            : null
+    : null;
+  return <AppShell labRoute={labRoute} />;
 }

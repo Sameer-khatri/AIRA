@@ -1,0 +1,1422 @@
+{
+  "schemaVersion": 1,
+  "character": "AIRA",
+  "canvas": {
+    "width": 1024,
+    "height": 1600
+  },
+  "feetBaselineY": 1570,
+  "coordinateConvention": {
+    "pixelRows": "zero-based",
+    "alphaBounds": "exclusive right and bottom coordinates"
+  },
+  "totals": {
+    "turnaround": 12,
+    "pose": 24,
+    "expression": 36,
+    "runtimePngs": 72
+  },
+  "outfits": {
+    "gray-teal": {
+      "label": "Gray–teal casual",
+      "categories": {
+        "turnaround": {
+          "front": {
+            "id": "gray-teal.turnaround.front",
+            "label": "Front",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/turnaround/front.png",
+            "category": "turnaround",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 306,
+              "top": 70,
+              "rightExclusive": 718,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "db71d9f873a5b0c6a8c481e2234d553e7b9ababaa67dc050eefb5316f35bf229",
+            "sourceFilename": "aira-gray-teal-front.png"
+          },
+          "three-quarter": {
+            "id": "gray-teal.turnaround.three-quarter",
+            "label": "Three-quarter",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/turnaround/three-quarter.png",
+            "category": "turnaround",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 317,
+              "top": 70,
+              "rightExclusive": 707,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "14babcd1f79010443a12c014e39223afb5e9ff36854c9b0c16f9b91a585fac31",
+            "sourceFilename": "aira-gray-teal-three-quarter.png"
+          },
+          "side": {
+            "id": "gray-teal.turnaround.side",
+            "label": "Side",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/turnaround/side.png",
+            "category": "turnaround",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 342,
+              "top": 70,
+              "rightExclusive": 681,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9b5706c4cfc338756950654f03cc091071ae2814c34f0bf7025dc0a2feffd192",
+            "sourceFilename": "aira-gray-teal-side.png"
+          },
+          "back": {
+            "id": "gray-teal.turnaround.back",
+            "label": "Back",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/turnaround/back.png",
+            "category": "turnaround",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 281,
+              "top": 70,
+              "rightExclusive": 742,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9372b85eb1d528012a29540a5d7f3890cd8648fae40b61491f91228a58b915c1",
+            "sourceFilename": "aira-gray-teal-back.png"
+          }
+        },
+        "pose": {
+          "neutral-idle": {
+            "id": "gray-teal.pose.neutral-idle",
+            "label": "Neutral idle",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/neutral-idle.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 289,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "6a4c51f718168e9a564e300a92f46b3eb7c009a6712d65e23a1da805758928d8",
+            "sourceFilename": "aira-gray-teal-pose-01-neutral-idle.png"
+          },
+          "gentle-wave": {
+            "id": "gray-teal.pose.gentle-wave",
+            "label": "Gentle wave",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/gentle-wave.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 265,
+              "top": 70,
+              "rightExclusive": 758,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "6bde01b2b42ab39ea1345a1ace5d1fcf4a963ae1810bcc63ddbc6491d4a46929",
+            "sourceFilename": "aira-gray-teal-pose-02-gentle-wave.png"
+          },
+          "open-palm-chatting": {
+            "id": "gray-teal.pose.open-palm-chatting",
+            "label": "Open-palm chatting",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/open-palm-chatting.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 242,
+              "top": 70,
+              "rightExclusive": 782,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "76eaacd0542a8c4a38a2d5ba4223b0013bd3c6fda10f7b94b8276494679c954c",
+            "sourceFilename": "aira-gray-teal-pose-03-open-palm-chatting.png"
+          },
+          "thinking-listening": {
+            "id": "gray-teal.pose.thinking-listening",
+            "label": "Thinking / listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/thinking-listening.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 317,
+              "top": 70,
+              "rightExclusive": 707,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "fd372b58d54d26587fb43d3f5bf0ca53234b90bc43db7a4fb185055abd2704f7",
+            "sourceFilename": "aira-gray-teal-pose-04-thinking-listening.png"
+          },
+          "presenting-right": {
+            "id": "gray-teal.pose.presenting-right",
+            "label": "Presenting right",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/presenting-right.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 200,
+              "top": 70,
+              "rightExclusive": 824,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "d3cfbd10eaf4abb62af60eeccb77263215e39f719f9969bedab63b97a745a23f",
+            "sourceFilename": "aira-gray-teal-pose-05-presenting-right.png"
+          },
+          "presenting-left": {
+            "id": "gray-teal.pose.presenting-left",
+            "label": "Presenting left",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/presenting-left.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 185,
+              "top": 70,
+              "rightExclusive": 838,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9e318119dc68bae35e2201f30ceb9dd907213beb88b764fcbbde35cef9724fba",
+            "sourceFilename": "aira-gray-teal-pose-06-presenting-left.png"
+          },
+          "concerned-error": {
+            "id": "gray-teal.pose.concerned-error",
+            "label": "Concerned / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/concerned-error.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 715,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "c4329e4d95e4caba276aad7ee292490534d2d53f2ff19e7ab2167d54fb239140",
+            "sourceFilename": "aira-gray-teal-pose-07-concerned-error.png"
+          },
+          "happy-completion": {
+            "id": "gray-teal.pose.happy-completion",
+            "label": "Happy / completion",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/poses/happy-completion.png",
+            "category": "pose",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 317,
+              "top": 70,
+              "rightExclusive": 707,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "843df9daf4ab3f2933d601d68b6669c15fcfd6e8b6da85779e3ca6b561436ccb",
+            "sourceFilename": "aira-gray-teal-pose-08-happy-completion.png"
+          }
+        },
+        "expression": {
+          "soft-neutral": {
+            "id": "gray-teal.expression.soft-neutral",
+            "label": "Soft neutral",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/soft-neutral.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 289,
+              "top": 70,
+              "rightExclusive": 734,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "5e80d8b0580ebd471efe4e0f5a1f178c3e3f457b58d4e96a68bb80650353fc9f",
+            "sourceFilename": "aira-gray-expression-01-soft-neutral.png"
+          },
+          "shy-embarrassed": {
+            "id": "gray-teal.expression.shy-embarrassed",
+            "label": "Shy / embarrassed",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/shy-embarrassed.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "d0e21d5c4a29dfb4a6c638568a5122cb8eaf8336fc62a7fd06e3ef7f5c1f6452",
+            "sourceFilename": "aira-gray-expression-02-shy-embarrassed.png"
+          },
+          "attentive-listening": {
+            "id": "gray-teal.expression.attentive-listening",
+            "label": "Attentive listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/attentive-listening.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a621e385572558dca47e7af584af686094eeb26080c9837bf4fb73ff68e45fd1",
+            "sourceFilename": "aira-gray-expression-03-attentive-listening.png"
+          },
+          "focused-thinking": {
+            "id": "gray-teal.expression.focused-thinking",
+            "label": "Focused thinking",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/focused-thinking.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "f370e655a5c369325aab1b225e3731d8a61d723285d753dc57f3698aad7b7ab7",
+            "sourceFilename": "aira-gray-expression-04-focused-thinking.png"
+          },
+          "small-warm-smile": {
+            "id": "gray-teal.expression.small-warm-smile",
+            "label": "Small warm smile",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/small-warm-smile.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 288,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "bb55935004d0df303fd263a031f961cb28a7fe92d628476d5bae0ae4f8ef2e04",
+            "sourceFilename": "aira-gray-expression-05-small-warm-smile.png"
+          },
+          "happy": {
+            "id": "gray-teal.expression.happy",
+            "label": "Happy",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/happy.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "d8040afd7d85b520c57abe5daa4141850062e6c0bd8507eac3d67dfb6a9ca5f2",
+            "sourceFilename": "aira-gray-expression-06-happy.png"
+          },
+          "concerned": {
+            "id": "gray-teal.expression.concerned",
+            "label": "Concerned",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/concerned.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 289,
+              "top": 70,
+              "rightExclusive": 734,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a72e18f1c1818b3ac97ac457017f5d72ab6229c212027aedbd71f817dbf4f526",
+            "sourceFilename": "aira-gray-expression-07-concerned.png"
+          },
+          "apologetic-error": {
+            "id": "gray-teal.expression.apologetic-error",
+            "label": "Apologetic / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/apologetic-error.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "6c1ba6d7b171e54006f7ec914e3f7e08fc80bcc1f2aa256b3ada0fa03bfc3b1d",
+            "sourceFilename": "aira-gray-expression-08-apologetic-error.png"
+          },
+          "surprised": {
+            "id": "gray-teal.expression.surprised",
+            "label": "Surprised",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/surprised.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "e7c39103a35e7b3803ed2df9f6f70c9fa1f3d9c86ba2670f75dd4494bf1cf4d0",
+            "sourceFilename": "aira-gray-expression-09-surprised.png"
+          },
+          "tired-low-energy": {
+            "id": "gray-teal.expression.tired-low-energy",
+            "label": "Tired / low-energy",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/tired-low-energy.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "49595e4791faefd01a57fdcb2d3f3cb441666545cdf4b5f8d50b9ba14e1905a0",
+            "sourceFilename": "aira-gray-expression-10-tired-low-energy.png"
+          },
+          "eyes-closed-content": {
+            "id": "gray-teal.expression.eyes-closed-content",
+            "label": "Eyes closed / content",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/eyes-closed-content.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "7606a071c67819bf64d84945262e6d7d90f14d6246fc0a22a2dbd8275570c297",
+            "sourceFilename": "aira-gray-expression-11-eyes-closed-content.png"
+          },
+          "speaking": {
+            "id": "gray-teal.expression.speaking",
+            "label": "Speaking",
+            "publicPath": "/avatar/v2/aira-character/outfits/gray-teal/expressions/speaking.png",
+            "category": "expression",
+            "outfit": "gray-teal",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 289,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "66e59a3102f9350af4bed06a67815621248a16708abb828ee7227934e316730e",
+            "sourceFilename": "aira-gray-expression-12-speaking.png"
+          }
+        }
+      }
+    },
+    "blue-structured": {
+      "label": "Blue structured",
+      "categories": {
+        "turnaround": {
+          "front": {
+            "id": "blue-structured.turnaround.front",
+            "label": "Front",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/turnaround/front.png",
+            "category": "turnaround",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 288,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "73dc2284197a2a60a83e0a37a667509489c2e643880c69dbb37a77d9b84ad92c",
+            "sourceFilename": "aira-blue-structured-front.png"
+          },
+          "three-quarter": {
+            "id": "blue-structured.turnaround.three-quarter",
+            "label": "Three-quarter",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/turnaround/three-quarter.png",
+            "category": "turnaround",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 306,
+              "top": 70,
+              "rightExclusive": 717,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "8b2961dc4fa9beaefe5de4a792dc2af43c6e3302fcc208a836e0a5f87dd13904",
+            "sourceFilename": "aira-blue-structured-three-quarter.png"
+          },
+          "side": {
+            "id": "blue-structured.turnaround.side",
+            "label": "Side",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/turnaround/side.png",
+            "category": "turnaround",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 342,
+              "top": 70,
+              "rightExclusive": 681,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "de4cc1d0a08fd6c23bdef206ee0deb71e383e7f929b9201fe2c4ebc96b02ff74",
+            "sourceFilename": "aira-blue-structured-side.png"
+          },
+          "back": {
+            "id": "blue-structured.turnaround.back",
+            "label": "Back",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/turnaround/back.png",
+            "category": "turnaround",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 280,
+              "top": 70,
+              "rightExclusive": 743,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "8517a541e7a71a857ff04fa6957f10f8f6d09de41c5c5f7bb02b956b7c169282",
+            "sourceFilename": "aira-blue-structured-back.png"
+          }
+        },
+        "pose": {
+          "neutral-idle": {
+            "id": "blue-structured.pose.neutral-idle",
+            "label": "Neutral idle",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/neutral-idle.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 288,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "73dc2284197a2a60a83e0a37a667509489c2e643880c69dbb37a77d9b84ad92c",
+            "sourceFilename": "aira-blue-pose-01-neutral-idle.png"
+          },
+          "gentle-wave": {
+            "id": "blue-structured.pose.gentle-wave",
+            "label": "Gentle wave",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/gentle-wave.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 261,
+              "top": 70,
+              "rightExclusive": 762,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "1c9c9e8f333a8cb64cc4ed9beb5d5ca34367dcabd64bfc16daa69997f8b63ccd",
+            "sourceFilename": "aira-blue-pose-02-gentle-wave.png"
+          },
+          "open-palm-chatting": {
+            "id": "blue-structured.pose.open-palm-chatting",
+            "label": "Open-palm chatting",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/open-palm-chatting.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 240,
+              "top": 70,
+              "rightExclusive": 783,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "d4650dffc00fd3d65f2060446f0328a920a6faf77afc016d4fe6ae28f8f543d6",
+            "sourceFilename": "aira-blue-pose-03-open-palm-chatting.png"
+          },
+          "thinking-listening": {
+            "id": "blue-structured.pose.thinking-listening",
+            "label": "Thinking / listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/thinking-listening.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 297,
+              "top": 70,
+              "rightExclusive": 726,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "df28098f84a383cd34540baebd83b4823ef87ec4d0df516b4420b8a614eda065",
+            "sourceFilename": "aira-blue-pose-04-thinking-listening.png"
+          },
+          "presenting-right": {
+            "id": "blue-structured.pose.presenting-right",
+            "label": "Presenting right",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/presenting-right.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 195,
+              "top": 70,
+              "rightExclusive": 829,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "556fa18c527e6c305ae88fed5dfb6506a8f5244258b3534e4b1b12628a5f3524",
+            "sourceFilename": "aira-blue-pose-05-presenting-right.png"
+          },
+          "presenting-left": {
+            "id": "blue-structured.pose.presenting-left",
+            "label": "Presenting left",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/presenting-left.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 185,
+              "top": 70,
+              "rightExclusive": 839,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "50ff6ecf72675b4bbfd3b82e05daacbf3370cf587510fcbd0feb95d856a04c18",
+            "sourceFilename": "aira-blue-pose-06-presenting-left.png"
+          },
+          "concerned-error": {
+            "id": "blue-structured.pose.concerned-error",
+            "label": "Concerned / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/concerned-error.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 307,
+              "top": 70,
+              "rightExclusive": 716,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "4f203a1ef6371472cf42a9e0fc9cd47f3abf77228f4b1dfc27745f60e1c69383",
+            "sourceFilename": "aira-blue-pose-07-concerned-error.png"
+          },
+          "happy-completion": {
+            "id": "blue-structured.pose.happy-completion",
+            "label": "Happy / completion",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/poses/happy-completion.png",
+            "category": "pose",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 307,
+              "top": 70,
+              "rightExclusive": 717,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "bbcaea0e742b52d7d61ce1594bd7236317d634142de65815fac4d72fc61e3537",
+            "sourceFilename": "aira-blue-pose-08-happy-completion.png"
+          }
+        },
+        "expression": {
+          "soft-neutral": {
+            "id": "blue-structured.expression.soft-neutral",
+            "label": "Soft neutral",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/soft-neutral.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 288,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "8b7fa9bea8c0f4983e7815dcf5eb7abe49a2b77e5c8a95c572915f49c4b34fdb",
+            "sourceFilename": "aira-blue-expression-01-soft-neutral.png"
+          },
+          "shy-embarrassed": {
+            "id": "blue-structured.expression.shy-embarrassed",
+            "label": "Shy / embarrassed",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/shy-embarrassed.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 732,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "d53d6edd1b8c7309f9b189265a902362459de4489c8132be7fd50f5ed34ff231",
+            "sourceFilename": "aira-blue-expression-02-shy-embarrassed.png"
+          },
+          "attentive-listening": {
+            "id": "blue-structured.expression.attentive-listening",
+            "label": "Attentive listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/attentive-listening.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 289,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "797e68dc01a2ae78e004e9fb6e208438ec7a02b25ca699a08520395cade71902",
+            "sourceFilename": "aira-blue-expression-03-attentive-listening.png"
+          },
+          "focused-thinking": {
+            "id": "blue-structured.expression.focused-thinking",
+            "label": "Focused thinking",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/focused-thinking.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9dbf15732993ccb5909a54659443652457a1b2d2abbfedf505a7a06a55cac8b8",
+            "sourceFilename": "aira-blue-expression-04-focused-thinking.png"
+          },
+          "small-warm-smile": {
+            "id": "blue-structured.expression.small-warm-smile",
+            "label": "Small warm smile",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/small-warm-smile.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 732,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "c8845fab1f64169c7bfd0762f6b7f0f65591c823ae0d0ed54f6c09d9ab7c03a2",
+            "sourceFilename": "aira-blue-expression-05-small-warm-smile.png"
+          },
+          "happy": {
+            "id": "blue-structured.expression.happy",
+            "label": "Happy",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/happy.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "5cc6a0c975bb7fb1c7d07b7da152f9a1eb76e458c3cad10b830fe888782b3bdd",
+            "sourceFilename": "aira-blue-expression-06-happy.png"
+          },
+          "concerned": {
+            "id": "blue-structured.expression.concerned",
+            "label": "Concerned",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/concerned.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 288,
+              "top": 70,
+              "rightExclusive": 735,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "fb6ce38bf341281c115d87697584f68ff1b4b801abd3d2175c1154ab02d25c84",
+            "sourceFilename": "aira-blue-expression-07-concerned.png"
+          },
+          "apologetic-error": {
+            "id": "blue-structured.expression.apologetic-error",
+            "label": "Apologetic / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/apologetic-error.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "57c72eff223ae42756daf5a634172d54f38adecb169bac62e26bf014bbb6d197",
+            "sourceFilename": "aira-blue-expression-08-apologetic-error.png"
+          },
+          "surprised": {
+            "id": "blue-structured.expression.surprised",
+            "label": "Surprised",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/surprised.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "16e098cc150a38cf30318621f26a16ba37b70a7f345821b601590b439fe544b6",
+            "sourceFilename": "aira-blue-expression-09-surprised.png"
+          },
+          "tired-low-energy": {
+            "id": "blue-structured.expression.tired-low-energy",
+            "label": "Tired / low-energy",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/tired-low-energy.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "b35edc49d37d097dfb9fbd0b2346f113e4411bea9cc4c9058ff2d66da2bd5acf",
+            "sourceFilename": "aira-blue-expression-10-tired-low-energy.png"
+          },
+          "eyes-closed-content": {
+            "id": "blue-structured.expression.eyes-closed-content",
+            "label": "Eyes closed / content",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/eyes-closed-content.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 732,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9c04dc13290e9b96398ea38d3a166126dbd3f335a12c30ce3661d476c3c7083f",
+            "sourceFilename": "aira-blue-expression-11-eyes-closed-content.png"
+          },
+          "speaking": {
+            "id": "blue-structured.expression.speaking",
+            "label": "Speaking",
+            "publicPath": "/avatar/v2/aira-character/outfits/blue-structured/expressions/speaking.png",
+            "category": "expression",
+            "outfit": "blue-structured",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 290,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "4bcbdc75928feb5347bd4e14a30e68165b230fbb8e8d9f57eb5b5e8ed03d001f",
+            "sourceFilename": "aira-blue-expression-12-speaking.png"
+          }
+        }
+      }
+    },
+    "midnight-party": {
+      "label": "Midnight party",
+      "categories": {
+        "turnaround": {
+          "front": {
+            "id": "midnight-party.turnaround.front",
+            "label": "Front",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/turnaround/front.png",
+            "category": "turnaround",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 715,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a37e2c7521168832d2bb3e7251dc809da2789e77bfe09b16f0f14e7541dfc2cc",
+            "sourceFilename": "aira-midnight-party-front.png"
+          },
+          "three-quarter": {
+            "id": "midnight-party.turnaround.three-quarter",
+            "label": "Three-quarter",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/turnaround/three-quarter.png",
+            "category": "turnaround",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 334,
+              "top": 70,
+              "rightExclusive": 689,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "595a38e2d6ce5c0b3b284c39e1d81837162ca88e8364cc15dcd61b20720d1b7c",
+            "sourceFilename": "aira-midnight-party-three-quarter.png"
+          },
+          "side": {
+            "id": "midnight-party.turnaround.side",
+            "label": "Side",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/turnaround/side.png",
+            "category": "turnaround",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 385,
+              "top": 70,
+              "rightExclusive": 638,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "805c6a2f28648268e29eccd568286e63ad794340ac250d3d90479df508aafd97",
+            "sourceFilename": "aira-midnight-party-side.png"
+          },
+          "back": {
+            "id": "midnight-party.turnaround.back",
+            "label": "Back",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/turnaround/back.png",
+            "category": "turnaround",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 291,
+              "top": 70,
+              "rightExclusive": 733,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "dafc556604fa6e46269b6eeaa1b0097fcd2c111fa8b3832ed72a9cff0d44ebb5",
+            "sourceFilename": "aira-midnight-party-back.png"
+          }
+        },
+        "pose": {
+          "neutral-idle": {
+            "id": "midnight-party.pose.neutral-idle",
+            "label": "Neutral idle",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/neutral-idle.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 715,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a37e2c7521168832d2bb3e7251dc809da2789e77bfe09b16f0f14e7541dfc2cc",
+            "sourceFilename": "aira-midnight-pose-01-neutral-idle.png"
+          },
+          "gentle-wave": {
+            "id": "midnight-party.pose.gentle-wave",
+            "label": "Gentle wave",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/gentle-wave.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 287,
+              "top": 70,
+              "rightExclusive": 737,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "8c5fd64589c0f3f1d7662e6236824bbba3c3062cd961a04e16bb31fd1edb2318",
+            "sourceFilename": "aira-midnight-pose-02-gentle-wave.png"
+          },
+          "open-palm-chatting": {
+            "id": "midnight-party.pose.open-palm-chatting",
+            "label": "Open-palm chatting",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/open-palm-chatting.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 248,
+              "top": 70,
+              "rightExclusive": 776,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "ad764a94dddb597f12172d2dc1ac54c5ba35013247f9b9314f13ec2cc1f34018",
+            "sourceFilename": "aira-midnight-pose-03-open-palm-chatting.png"
+          },
+          "thinking-listening": {
+            "id": "midnight-party.pose.thinking-listening",
+            "label": "Thinking / listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/thinking-listening.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 360,
+              "top": 70,
+              "rightExclusive": 663,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "8405ca814652c3da85084497fc817b8b0097bc54352d96912cfbc1a0808af09c",
+            "sourceFilename": "aira-midnight-pose-04-thinking-listening.png"
+          },
+          "presenting-right": {
+            "id": "midnight-party.pose.presenting-right",
+            "label": "Presenting right",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/presenting-right.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 198,
+              "top": 70,
+              "rightExclusive": 826,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "43dac2bfbccbc8bd2ab84ea3d57c9f16d335b4eb90eb1ca064b494d4282fe2f1",
+            "sourceFilename": "aira-midnight-pose-05-presenting-right.png"
+          },
+          "presenting-left": {
+            "id": "midnight-party.pose.presenting-left",
+            "label": "Presenting left",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/presenting-left.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 211,
+              "top": 70,
+              "rightExclusive": 812,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "b9143f7621efecbc8d682f8e525b71ffe4857c0f27c64c94ec6e1a858c22c518",
+            "sourceFilename": "aira-midnight-pose-06-presenting-left.png"
+          },
+          "concerned-error": {
+            "id": "midnight-party.pose.concerned-error",
+            "label": "Concerned / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/concerned-error.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 338,
+              "top": 70,
+              "rightExclusive": 686,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "1a55867e438f9f31cd8812d471886b0a29901a5c4845dee6af5b55ace8ec706d",
+            "sourceFilename": "aira-midnight-pose-07-concerned-error.png"
+          },
+          "happy-completion": {
+            "id": "midnight-party.pose.happy-completion",
+            "label": "Happy / completion",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/poses/happy-completion.png",
+            "category": "pose",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 341,
+              "top": 70,
+              "rightExclusive": 683,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "700ba90de60383d7109131fa531374e0d1338416afc738a04c51d289756945f9",
+            "sourceFilename": "aira-midnight-pose-08-happy-completion.png"
+          }
+        },
+        "expression": {
+          "soft-neutral": {
+            "id": "midnight-party.expression.soft-neutral",
+            "label": "Soft neutral",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/soft-neutral.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 715,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a37e2c7521168832d2bb3e7251dc809da2789e77bfe09b16f0f14e7541dfc2cc",
+            "sourceFilename": "aira-midnight-expression-01-soft-neutral.png"
+          },
+          "shy-embarrassed": {
+            "id": "midnight-party.expression.shy-embarrassed",
+            "label": "Shy / embarrassed",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/shy-embarrassed.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "f553a23e3342964c92e06b028bf3e51d5b7baf140fc4bd92cc5ffe80334b1584",
+            "sourceFilename": "aira-midnight-expression-02-shy-embarrassed.png"
+          },
+          "attentive-listening": {
+            "id": "midnight-party.expression.attentive-listening",
+            "label": "Attentive listening",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/attentive-listening.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "09a8de5200e93720eb84105b7a25b030d9feff8a4cf0d1b57a4781cb22380df8",
+            "sourceFilename": "aira-midnight-expression-03-attentive-listening.png"
+          },
+          "focused-thinking": {
+            "id": "midnight-party.expression.focused-thinking",
+            "label": "Focused thinking",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/focused-thinking.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "9cb610722fc987f3f91c921e218bb958de6279830d277bbccb6dcbc972f88583",
+            "sourceFilename": "aira-midnight-expression-04-focused-thinking.png"
+          },
+          "small-warm-smile": {
+            "id": "midnight-party.expression.small-warm-smile",
+            "label": "Small warm smile",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/small-warm-smile.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 311,
+              "top": 70,
+              "rightExclusive": 713,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "64f6add89852bb1d43cd17c5c4cde60c55e700aacb22cf7d7c79bdf9a6a28668",
+            "sourceFilename": "aira-midnight-expression-05-small-warm-smile.png"
+          },
+          "happy": {
+            "id": "midnight-party.expression.happy",
+            "label": "Happy",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/happy.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 311,
+              "top": 70,
+              "rightExclusive": 713,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "e66b9f0e07432bc36a0221f8aa118193c676593d64011060a3f726464caf1fcd",
+            "sourceFilename": "aira-midnight-expression-06-happy.png"
+          },
+          "concerned": {
+            "id": "midnight-party.expression.concerned",
+            "label": "Concerned",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/concerned.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "033d3c720b5345f45679ff633d8b5463e804434751e7f2f8bbfc8a9ec7ea3436",
+            "sourceFilename": "aira-midnight-expression-07-concerned.png"
+          },
+          "apologetic-error": {
+            "id": "midnight-party.expression.apologetic-error",
+            "label": "Apologetic / error",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/apologetic-error.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "3ae2d36f5314d49caf170006b8a7b6384d9c1766d31bd3c4d019445155a91f54",
+            "sourceFilename": "aira-midnight-expression-08-apologetic-error.png"
+          },
+          "surprised": {
+            "id": "midnight-party.expression.surprised",
+            "label": "Surprised",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/surprised.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "090816e2a6e891281fb8fe64a2dde04c713120e8f419e985e97eaa62a480834d",
+            "sourceFilename": "aira-midnight-expression-09-surprised.png"
+          },
+          "tired-low-energy": {
+            "id": "midnight-party.expression.tired-low-energy",
+            "label": "Tired / low-energy",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/tired-low-energy.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 713,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "173965ec67930818bb518db0b232bb5128998ac455ff5b777979d1fc22cb26eb",
+            "sourceFilename": "aira-midnight-expression-10-tired-low-energy.png"
+          },
+          "eyes-closed-content": {
+            "id": "midnight-party.expression.eyes-closed-content",
+            "label": "Eyes closed / content",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/eyes-closed-content.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 309,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "4b4d043d3cb09eb04a9fc6e15a0413cd0d58f4c331e004a1fa4b4c74c252fdd2",
+            "sourceFilename": "aira-midnight-expression-11-eyes-closed-content.png"
+          },
+          "speaking": {
+            "id": "midnight-party.expression.speaking",
+            "label": "Speaking",
+            "publicPath": "/avatar/v2/aira-character/outfits/midnight-party/expressions/speaking.png",
+            "category": "expression",
+            "outfit": "midnight-party",
+            "width": 1024,
+            "height": 1600,
+            "feetBaselineY": 1570,
+            "alphaBounds": {
+              "left": 310,
+              "top": 70,
+              "rightExclusive": 714,
+              "bottomExclusive": 1570
+            },
+            "lastOpaqueRow": 1569,
+            "sha256": "a46dbb964d8ec2ee4a7d9bd49d119df99fc15a4d8af1413d70f00be470647098",
+            "sourceFilename": "aira-midnight-expression-12-speaking.png"
+          }
+        }
+      }
+    }
+  }
+}

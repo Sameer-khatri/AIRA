@@ -4,6 +4,7 @@ import type { AiraConnectionState, AiraPresenceState } from "../features/home/pr
 interface LivingBackgroundProps {
   state: AiraPresenceState;
   connectionState: AiraConnectionState;
+  focus?: "default" | "today" | "memory";
 }
 
 interface Particle {
@@ -57,10 +58,11 @@ function makeStrands(): Strand[] {
   }));
 }
 
-export default function LivingBackground({ state, connectionState }: LivingBackgroundProps) {
+export default function LivingBackground({ state, connectionState, focus = "default" }: LivingBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const stateRef = useRef<AiraPresenceState>(state);
   const connectionRef = useRef<AiraConnectionState>(connectionState);
+  const focusRef = useRef(focus);
   const pointerRef = useRef({ x: 0.5, y: 0.5, active: false });
   const visibilityRef = useRef(true);
   const reducedMotionRef = useRef(false);
@@ -83,6 +85,10 @@ export default function LivingBackground({ state, connectionState }: LivingBackg
   useEffect(() => {
     connectionRef.current = connectionState;
   }, [connectionState]);
+
+  useEffect(() => {
+    focusRef.current = focus;
+  }, [focus]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -141,6 +147,7 @@ export default function LivingBackground({ state, connectionState }: LivingBackg
       const width = rect.width;
       const height = rect.height;
       const currentState = stateRef.current;
+      const currentFocus = focusRef.current;
       const pointer = pointerRef.current;
       const reducedMotion = reducedMotionRef.current;
       const time = now / 1000;
@@ -177,6 +184,41 @@ export default function LivingBackground({ state, connectionState }: LivingBackg
       rightGlow.addColorStop(1, "rgba(0, 0, 0, 0)");
       context.fillStyle = rightGlow;
       context.fillRect(0, 0, width, height);
+
+      const orbitCenterX = width * (currentFocus === "today" || currentFocus === "memory" ? 0.66 : 0.52);
+      const orbitCenterY = height * 0.52;
+      const orbitAlpha = isOffline ? 0.075 : currentFocus === "default" ? 0.13 : 0.18;
+      context.save();
+      context.lineWidth = 0.8;
+      context.strokeStyle = `rgba(${isOffline ? "115, 139, 134" : "74, 189, 164"}, ${orbitAlpha})`;
+      const orbitCount = currentFocus === "memory" ? 4 : 3;
+      for (let orbit = 0; orbit < orbitCount; orbit += 1) {
+        const radiusX = width * (0.13 + orbit * 0.048);
+        const radiusY = height * (0.18 + orbit * 0.045);
+        context.beginPath();
+        context.ellipse(orbitCenterX, orbitCenterY, radiusX, radiusY, -0.1 + orbit * 0.04, 0, TWO_PI);
+        context.stroke();
+        if (!reducedMotion && !isOffline) {
+          const angle = time * (0.035 + orbit * 0.009) + orbit * 1.7;
+          context.fillStyle = `rgba(102, 218, 190, ${0.28 + orbit * 0.04})`;
+          context.beginPath();
+          context.arc(orbitCenterX + Math.cos(angle) * radiusX, orbitCenterY + Math.sin(angle) * radiusY, 1.6, 0, TWO_PI);
+          context.fill();
+        }
+      }
+      const anchorY = currentFocus === "today" ? height * 0.46 : height * 0.42;
+      const leftAnchorX = width * (currentFocus === "default" ? 0.22 : 0.25);
+      const rightAnchorX = width * (currentFocus === "default" ? 0.79 : 0.42);
+      context.strokeStyle = `rgba(${isOffline ? "151, 126, 86" : "86, 205, 178"}, ${isOffline ? 0.11 : 0.19})`;
+      context.setLineDash(currentFocus === "memory" ? [3, 7] : []);
+      context.beginPath();
+      context.moveTo(orbitCenterX - width * 0.08, orbitCenterY);
+      context.quadraticCurveTo(width * 0.42, height * 0.34, leftAnchorX, anchorY);
+      context.moveTo(orbitCenterX + width * 0.08, orbitCenterY);
+      context.quadraticCurveTo(width * 0.68, height * 0.35, rightAnchorX, currentFocus === "default" ? height * 0.43 : height * 0.57);
+      context.stroke();
+      context.setLineDash([]);
+      context.restore();
 
       if (isEngaged) {
         context.fillStyle = "rgba(3, 8, 8, 0.24)";

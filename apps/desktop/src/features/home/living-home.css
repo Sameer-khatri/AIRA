@@ -1,55 +1,10 @@
-/* Focused visual-correction overrides for the Living Home scene. */
-.living-home .avatar-stage-full .avatar-transform-layer {
-  height: clamp(520px, 74vh, 800px);
-  bottom: 3.8vh;
-}
-
-.living-home .avatar-stage-upper .avatar-camera {
-  top: 34px;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  width: clamp(480px, 37vw, 580px);
-  height: clamp(520px, 58vh, 620px);
-  transform: translateX(-50%);
-}
-
-.living-home .avatar-stage-upper .avatar-transform-layer {
-  top: 0;
-  bottom: auto;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  transform: translateX(-50%) scale(1.14);
-  transform-origin: center top;
-}
-
-.living-home .water-ripple-engaged,
-.living-home .water-ripple-waving { opacity: 0; }
-
-.living-home .water-ripple-stage { transition: opacity .32s ease, left .7s cubic-bezier(.22,.8,.24,1); }
-.living-home .water-contact-shimmer { opacity: .66; }
-.living-home .water-inner-ring { border-color: rgba(92, 220, 194, .31); }
-
-.living-home .water-ripple-presenting { left: 65%; }
-.living-home.living-home-memory-open .water-ripple-stage { left: 43%; }
-
-.living-home .living-panel.today-panel { top: 16%; }
-.living-home .living-panel.memory-panel { top: 17%; }
-
-.living-home .avatar-engage-target:focus-visible {
-  outline: none;
-  border-radius: 0;
-}
-
-.living-home .avatar-engage-target:focus-visible::after {
-  display: none;
-}
-
-@media (max-width: 720px) {
-  .living-home .avatar-stage-full .avatar-transform-layer { height: min(64vh, 500px); }
-  .living-home .avatar-stage-upper .avatar-camera { top: 26px; width: min(90vw, 480px); height: min(58vh, 520px); }
-  .living-home .avatar-stage-upper .avatar-transform-layer { top: 0; bottom: auto; }
-  .living-home .water-ripple-presenting, .living-home.living-home-memory-open .water-ripple-stage { left: 50%; }
-  .living-home .living-panel.today-panel, .living-home .living-panel.memory-panel { top: auto; right: 12px; bottom: 124px; left: 12px; width: auto; max-height: 46vh; }
-}
+.living-home-phase2{--home-mint:#68dcc0;position:relative;isolation:isolate;width:100%;height:100%;min-width:0;min-height:0;overflow:hidden}.living-home-phase2 .living-background{z-index:0}.living-home-phase2 .aira-scene{z-index:2}.living-home-phase2 .avatar-stage{isolation:isolate}.living-home-phase2 .avatar-image,.living-home-phase2 .avatar-stage.is-offline .avatar-image{opacity:1;filter:none}.living-home-phase2 .avatar-stage-full .avatar-transform-layer{left:53%;bottom:3.8vh;height:clamp(520px,74vh,800px)}.living-home-phase2 .avatar-stage-presenting .avatar-transform-layer{left:67%;bottom:3.6vh}.living-home-phase2.living-home-focus-memory .avatar-transform-layer{left:66%}.living-home-phase2 .avatar-stage-upper .avatar-camera{top:34px;right:auto;bottom:auto;left:50%;width:clamp(480px,37vw,580px);height:clamp(520px,58vh,620px);transform:translateX(-50%)}.living-home-phase2 .avatar-stage-upper .avatar-transform-layer{top:0;bottom:auto;width:100%;height:auto;aspect-ratio:2/3;transform:translateX(-50%) scale(1.14);transform-origin:center top}.living-home-phase2 .water-ripple-engaged,.living-home-phase2 .water-ripple-waving{opacity:0}.living-home-phase2 .water-ripple-stage{left:53%;transition:opacity .32s ease,left .7s cubic-bezier(.22,.8,.24,1)}.living-home-phase2.living-home-focus-today .water-ripple-stage,.living-home-phase2.living-home-focus-memory .water-ripple-stage{left:66%}.living-home-phase2 .water-contact-shimmer{opacity:.66}.living-home-phase2 .water-inner-ring{border-color:rgba(92,220,194,.31)}
+.home-orbit-content{position:absolute;z-index:4;inset:0;min-width:0;min-height:0;pointer-events:none}.home-data-anchor{position:absolute;display:grid;gap:9px;width:clamp(260px,23vw,390px);min-width:0;padding:18px 20px;border:1px solid rgba(108,190,170,.16);border-radius:16px;background:linear-gradient(135deg,rgba(7,24,21,.7),rgba(5,15,14,.34));box-shadow:0 18px 55px rgba(0,0,0,.2);backdrop-filter:blur(10px);pointer-events:auto;transition:top .65s cubic-bezier(.22,.8,.24,1),left .65s cubic-bezier(.22,.8,.24,1),right .65s cubic-bezier(.22,.8,.24,1),width .65s cubic-bezier(.22,.8,.24,1),opacity .3s ease,transform .65s cubic-bezier(.22,.8,.24,1)}.home-resume-anchor{top:27%;left:clamp(32px,5vw,92px)}.home-mission-anchor{top:29%;right:clamp(32px,5vw,92px)}.home-anchor-kicker{display:flex;align-items:center;gap:7px;color:rgba(104,220,192,.72);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}.home-data-anchor h2{margin:0;color:rgba(239,247,243,.94);font-size:clamp(18px,1.4vw,25px);font-weight:430;line-height:1.28;overflow-wrap:anywhere}.home-data-anchor p{margin:0;color:rgba(166,191,183,.68);font-size:12px;line-height:1.5;overflow-wrap:anywhere}.home-anchor-meta{display:flex;align-items:center;gap:6px;color:rgba(149,177,168,.56);font-size:10px}.home-data-anchor button,.memory-project-link{display:inline-flex;align-items:center;gap:7px;width:fit-content;margin-top:5px;padding:8px 11px;border:1px solid rgba(103,232,208,.25);border-radius:9px;color:rgba(217,240,232,.86);background:rgba(25,66,56,.3);cursor:pointer;font:inherit;font-size:11px}.home-data-anchor button:focus-visible,.memory-project-link:focus-visible{outline:2px solid rgba(103,232,208,.68);outline-offset:2px}
+.living-home-focus-today .home-resume-anchor{top:18%;left:5vw;width:min(30vw,360px);opacity:.52;transform:scale(.92);transform-origin:left top}.living-home-focus-today .home-mission-anchor{top:33%;right:auto;left:5vw;width:min(39vw,540px);padding:22px 24px;border-color:rgba(103,232,208,.34);background:linear-gradient(135deg,rgba(13,43,36,.82),rgba(5,18,16,.5))}.living-home-focus-today .home-mission-anchor h2{font-size:clamp(24px,2.1vw,34px)}.living-home-focus-memory .home-data-anchor{opacity:.2;pointer-events:none}.living-home-focus-memory .home-resume-anchor{left:3%;transform:scale(.9)}.living-home-focus-memory .home-mission-anchor{right:55%;transform:scale(.9)}
+.home-focus-space{position:absolute;z-index:5;pointer-events:auto}.home-focus-space header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}.home-focus-space header>span,.home-focus-space header div>span{color:rgba(104,220,192,.66);font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}.home-focus-space header h2{margin:7px 0 0;color:#edf6f2;font-size:clamp(20px,1.7vw,27px);font-weight:420}.home-focus-space header button{display:grid;width:31px;height:31px;padding:0;border:1px solid rgba(117,204,183,.25);border-radius:50%;place-items:center;color:#d7eee5;background:rgba(6,18,16,.5);cursor:pointer}.home-today-space{top:61%;left:5vw;width:min(42vw,620px)}.mission-path{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px;padding-top:16px}.mission-path::before{content:"";position:absolute;top:20px;right:10%;left:5%;height:1px;background:linear-gradient(90deg,rgba(104,220,192,.6),rgba(104,220,192,.18),transparent)}.mission-step{position:relative;display:grid;gap:5px;min-width:0;padding-top:15px}.mission-step i{position:absolute;top:0;left:0;width:9px;height:9px;border:1px solid rgba(104,220,192,.5);border-radius:50%;background:#10231f;box-shadow:0 0 12px rgba(104,220,192,.18)}.mission-step.is-active i{background:var(--home-mint);box-shadow:0 0 14px rgba(104,220,192,.6)}.mission-step span{color:rgba(142,177,166,.58);font-size:9px;letter-spacing:.1em;text-transform:uppercase}.mission-step strong{color:rgba(224,239,233,.82);font-size:11px;font-weight:450;line-height:1.4;overflow-wrap:anywhere}
+.home-memory-space{top:18%;left:clamp(34px,6vw,110px);width:min(42vw,650px);padding:24px;border:1px solid rgba(100,186,181,.18);border-radius:20px;background:radial-gradient(circle at 42% 50%,rgba(29,84,75,.23),rgba(5,17,15,.56) 68%);box-shadow:0 24px 70px rgba(0,0,0,.24)}.memory-constellation{position:relative;display:grid;gap:16px;margin-top:24px;padding:12px 0 8px 36px}.memory-constellation::before{content:"";position:absolute;top:8px;bottom:6px;left:10px;border-left:1px dashed rgba(103,208,191,.3)}.memory-constellation article{position:relative;display:grid;gap:5px;min-width:0;padding:12px 15px;border:1px solid rgba(103,208,191,.12);border-radius:12px;background:rgba(10,31,27,.4)}.memory-constellation article i{position:absolute;top:50%;left:-31px;width:10px;height:10px;border:1px solid rgba(103,208,191,.58);border-radius:50%;background:#14332d;box-shadow:0 0 12px rgba(103,208,191,.26);transform:translateY(-50%)}.memory-constellation span{color:rgba(142,188,180,.62);font-size:9px;letter-spacing:.1em;text-transform:uppercase}.memory-constellation strong{color:rgba(225,239,234,.86);font-size:13px;font-weight:430;line-height:1.45;overflow-wrap:anywhere}
+.home-readiness{position:absolute;z-index:6;left:50%;bottom:18%;display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid rgba(174,139,76,.22);border-radius:999px;color:rgba(201,174,119,.7);background:rgba(8,18,17,.54);font-size:9px;letter-spacing:.05em;transform:translateX(-50%)}.home-readiness[data-ready]{border-color:rgba(91,190,165,.2);color:rgba(145,205,188,.7)}.living-home-phase2 .scene-controls{z-index:8}.living-home-phase2 .scene-controls-left{left:clamp(22px,3vw,48px)}.living-home-phase2 .scene-controls-right{right:clamp(22px,3vw,48px)}.living-home-phase2 .avatar-engage-target:focus-visible{outline:none;border-radius:0}.living-home-phase2 .avatar-engage-target:focus-visible::after{display:none}
+@media(max-width:1180px){.home-data-anchor{width:min(31vw,330px)}.home-resume-anchor{left:28px}.home-mission-anchor{right:28px}.living-home-focus-today .home-mission-anchor{left:28px;width:44vw}.living-home-focus-today .home-resume-anchor{left:28px}.home-today-space{left:28px;width:47vw}.home-memory-space{left:28px;width:47vw}.living-home-phase2 .avatar-stage-full .avatar-transform-layer{left:51%}}
+@media(max-width:820px){.living-home-phase2{overflow-x:hidden}.living-home-phase2 .avatar-stage-full .avatar-transform-layer{left:70%;bottom:17%;width:min(380px,43vw);height:min(58vh,560px)}.living-home-phase2 .avatar-stage-presenting .avatar-transform-layer,.living-home-phase2.living-home-focus-memory .avatar-transform-layer{left:76%;width:min(360px,40vw)}.living-home-phase2 .water-ripple-stage,.living-home-phase2.living-home-focus-today .water-ripple-stage,.living-home-phase2.living-home-focus-memory .water-ripple-stage{left:72%;bottom:15%;transform:translateX(-50%) scale(.7)}.home-data-anchor{width:48vw;padding:15px 16px}.home-resume-anchor{top:17%;left:18px}.home-mission-anchor{top:47%;right:auto;left:18px}.living-home-focus-today .home-resume-anchor{top:13%;left:18px;width:42vw}.living-home-focus-today .home-mission-anchor{top:31%;left:18px;width:52vw}.home-today-space{top:61%;left:18px;width:55vw}.living-home-focus-memory .home-data-anchor{display:none}.home-memory-space{top:14%;left:18px;width:55vw;padding:18px}.home-readiness{bottom:15%;left:72%;max-width:28vw;text-align:center}.living-home-phase2 .scene-controls{bottom:18px}.living-home-phase2 .scene-controls-left{right:auto;left:16px}.living-home-phase2 .scene-controls-right{right:16px}.living-home-phase2 .scene-controls button{min-height:42px;padding:0 11px;font-size:11px}.mission-path{gap:10px}}
+@media(max-width:620px){.living-home-phase2{height:calc(100dvh - 64px);overflow-y:auto}.living-home-phase2 .aira-scene{opacity:.5}.living-home-phase2 .avatar-stage-full .avatar-transform-layer,.living-home-phase2 .avatar-stage-presenting .avatar-transform-layer,.living-home-phase2.living-home-focus-memory .avatar-transform-layer{left:78%;bottom:25%;width:250px;height:390px}.home-data-anchor,.living-home-focus-today .home-resume-anchor,.living-home-focus-today .home-mission-anchor{right:16px;left:16px;width:auto}.home-resume-anchor{top:10%}.home-mission-anchor{top:38%}.living-home-focus-today .home-resume-anchor{top:8%}.living-home-focus-today .home-mission-anchor{top:27%}.home-today-space{top:57%;right:16px;left:16px;width:auto}.home-memory-space{top:10%;right:16px;left:16px;width:auto}.mission-path{grid-template-columns:1fr}.mission-path::before{display:none}.home-readiness{display:none}.living-home-phase2 .scene-controls{position:fixed}.living-home-phase2 .scene-controls-left{right:16px;bottom:72px}.living-home-phase2 .scene-controls-right{left:16px}.living-home-phase2 .scene-controls button{flex:1}.living-home-label{display:none}}
+@media(prefers-reduced-motion:reduce){.home-data-anchor,.living-home-phase2 .avatar-transform-layer,.living-home-phase2 .water-ripple-stage{transition:none}}
